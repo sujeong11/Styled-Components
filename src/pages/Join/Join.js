@@ -36,9 +36,9 @@ const LinkDiv = styled.div`
   
   a {
     color: ${props => props.theme.darkPurple};
-    text-decoration: none;
     font-size: 12px;
     font-weight: bold;
+    text-decoration: none;
   }
 `;
 
