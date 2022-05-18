@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Nav from '../../components/Nav/Nav';
 import styled from 'styled-components';
 
@@ -50,24 +50,24 @@ const ImgTD = styled.td`
 
 function TipNotice() {
   return (
-    <div>
+    <Fragment>
       <Nav />
 
-      <div>
-        <h1>데이타베이스 설계</h1>
-        <div>나연묵 교수님</div>
+      <Container>
+        <H1>데이타베이스 설계</H1>
+        <ProfessorDiv>나연묵 교수님</ProfessorDiv>
 
         <table>
           <tbody>
             <tr>
               <td>
-                <div>데이터베이스 설계 기말고사 공지</div>
-                <div>시험기간</div>
-                <div>2021.12.7</div>
+                <NoticeDiv>데이터베이스 설계 기말고사 공지</NoticeDiv>
+                <PeriodDiv>시험기간</PeriodDiv>
+                <DateDiv>2021.12.7</DateDiv>
               </td>
-              <td>
+              <ImgTD>
                 <img src='../../../tip.jpg' alt='팁 이미지' />
-              </td>
+              </ImgTD>
             </tr>
           </tbody>
         </table>
@@ -75,14 +75,14 @@ function TipNotice() {
           <tbody>
             <tr>
               <td>
-                <div>데이터베이스 설계 기말고사 공지</div>
-                <div>시험기간</div>
-                <div>2021.12.7</div>
+                <NoticeDiv>데이터베이스 설계 기말고사 공지</NoticeDiv>
+                <PeriodDiv>시험기간</PeriodDiv>
+                <DateDiv>2021.12.7</DateDiv>
               </td>
-              <td>
+              <ImgTD>
                 <img src='../../../tip.jpg' alt='팁 이미지'
                 width='100px'/>
-              </td>
+              </ImgTD>
             </tr>
           </tbody>
         </table>
@@ -90,19 +90,19 @@ function TipNotice() {
           <tbody>
             <tr>
               <td>
-                <div>데이터베이스 설계 기말고사 공지</div>
-                <div>시험기간</div>
-                <div>2021.12.7</div>
+                <NoticeDiv>데이터베이스 설계 기말고사 공지</NoticeDiv>
+                <PeriodDiv>시험기간</PeriodDiv>
+                <DateDiv>2021.12.7</DateDiv>
               </td>
-              <td>
+              <ImgTD>
                 <img src='../../../tip.jpg' alt='팁 이미지'
                 width='100px'/>
-              </td>
+              </ImgTD>
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
+      </Container>
+    </Fragment>
   )
 }
 
