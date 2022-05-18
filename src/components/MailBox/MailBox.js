@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import theme from '../../styles/theme';
 
 
@@ -50,16 +50,14 @@ const AssignmentTH = styled(TableTH)`
   vertical-align: top;
 `;
 
-const Textarea = css`
-  width: ${props => props.width};
-  height: ${props => props.height};
-  background-color: ${props => props.color1};
-  resize: none;
-  color: ${props => props.color2}; 
-`
-
 const AssignmentTD = styled(TableTD)`
-  ${Textarea};
+  textarea {
+    width: ${props => props.width};
+    height: ${props => props.height};
+    background-color: ${props => props.color1};
+    resize: none;
+    color: ${props => props.color2}; 
+  }
 `;
 
 const QuestionTH = styled(TableTH)`
@@ -68,11 +66,23 @@ const QuestionTH = styled(TableTH)`
 `;
 
 const QuestionTD = styled(TableTD)`
-  ${Textarea};
+  textarea {
+    width: ${props => props.width};
+    height: ${props => props.height};
+    background-color: ${props => props.color1};
+    resize: none;
+    color: ${props => props.color2}; 
+  }
 `;
 
 const ResultTD = styled(TableTD)`
-  ${Textarea};
+  textarea {
+    width: ${props => props.width};
+    height: ${props => props.height};
+    background-color: ${props => props.color1};
+    resize: none;
+    color: ${props => props.color2}; 
+  }
 `;
 
 const ButtonDiv = styled.div`
@@ -113,14 +123,14 @@ function MailBox() {
             <tr>
               <QuestionTH>질문</QuestionTH>
               <QuestionTD
-                width="400px" height="90px" color1="#ffffff" color2="#666666"
+                width="250px" height="70px" color1="#ffffff" color2={theme.mainBlack}
               >
                 <textarea />
               </QuestionTD>
             </tr>
             <tr>
               <ResultTD colSpan='2' 
-                width="250px" height="70px" color1="#f1eeee" color2={theme.mainBlack}
+                width="400px" height="90px" color1="#f1eeee" color2="#666666"
               >
                 <textarea />
               </ResultTD>

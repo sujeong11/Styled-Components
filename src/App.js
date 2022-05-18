@@ -12,6 +12,7 @@ import AfterLogin from './pages/AfterLogin/AfterLogin';
 import MyPage from './pages/MyPage/MyPage';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
+import MailBox from './components/MailBox/MailBox';
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
           <Route path = "/notice" element={<Notice />} />
           <Route path = "/tipNotice" element={<TipNotice />} />
           <Route path = "/afterLogin" element={<AfterLogin />} />  
-          <Route path = "/myPage" element={<MyPage />} />        
+          <Route path = "/myPage" element={<MyPage />} />  
+          <Route path = "/mailBox" element={<MailBox />} />        
+
         </Routes>
       </Router>
     </ThemeProvider>
