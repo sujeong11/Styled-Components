@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import styled from 'styled-components';
 
+const Table = styled.table`
+  margin: 0 auto;
+  border-spacing: 5px;
+`
+
+const Caption
 
 function LectureList({ title, button }) {
   const [show, setShow] = useState(false);
@@ -17,7 +24,7 @@ function LectureList({ title, button }) {
 
   return (
     <div>
-      <table>
+      <Table>
         <caption>{title}</caption>
         <thead>
           <tr>
@@ -79,7 +86,7 @@ function LectureList({ title, button }) {
             }
           </tr>
         </tbody>
-      </table>
+      </Table>
     </div>
   )
 }
