@@ -7,9 +7,30 @@ import styled from 'styled-components';
 const Table = styled.table`
   margin: 0 auto;
   border-spacing: 5px;
-`
+`;
 
-const Caption
+const Caption = styled.caption`
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0 8px 5px;
+`;
+
+const TableHead_TH = styled.th`
+  background-color: $dark-purple;
+  color: #ffffff;
+  height: 35px;
+  width: ${props => props.width};
+`;
+
+const TableBody_TD = styled.td`
+  height: 30px;
+  font-size: 15px;
+  background-color: #ffffff;
+`;
+
+const TableBody_TD_Professor = styled.td`
+`;
 
 function LectureList({ title, button }) {
   const [show, setShow] = useState(false);
@@ -25,11 +46,11 @@ function LectureList({ title, button }) {
   return (
     <div>
       <Table>
-        <caption>{title}</caption>
+        <Caption>{title}</Caption>
         <thead>
           <tr>
-            <th>교수명</th>
-            <th>과목</th>
+            <TableHead_TH width="200px">교수명</TableHead_TH>
+            <TableHead_TH width="600px">과목</TableHead_TH>
           </tr>
         </thead>
         <tbody>
