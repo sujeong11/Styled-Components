@@ -53,14 +53,14 @@ const CourseTD = styled(TableBodyTD)`
     border: 1px solid ${props => props.theme.mainBlack};
     border-radius: 10px;
     padding: 0 30px;
-    margin: 0 5px 5px 0;
+    margin: 0 15px 5px 0;
   }
 `;
 
 const Button = styled.button`
   border: 0;
   background-color: #ffffff;
-  margin-left: -32px;
+  margin: 0 0 10px -35px;
 
   svg {
     background-color: #ffffff;
