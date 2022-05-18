@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { Fragment } from 'react';
 import styled from 'styled-components';
 
 
@@ -79,7 +80,7 @@ function LectureList({ title, button }) {
   }, [])
 
   return (
-    <div>
+    <Fragment>
       <Table>
         <Caption>{title}</Caption>
         <thead>
@@ -143,7 +144,7 @@ function LectureList({ title, button }) {
           </tr>
         </tbody>
       </Table>
-    </div>
+    </Fragment>
   )
 }
 

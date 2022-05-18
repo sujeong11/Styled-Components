@@ -1,9 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
+
+const Container = styled.div`
+  background-color: #ffffff;
+  * {
+    background-color: #ffffff;
+  }
+`;
 
 function MailBox() {
   return (
-    <div>
+    <Container>
       <form>
         <table>
           <tbody>
@@ -39,7 +47,7 @@ function MailBox() {
           <button type='submit'>양식 등록</button>
         </div>
       </form>
-    </div>
+    </Container>
   )
 }
 
