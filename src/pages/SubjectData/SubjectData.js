@@ -1,48 +1,102 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import Nav from '../../components/Nav/Nav';
 import BookInfo from './component/BookInfo';
+import styled from 'styled-components';
 
+
+const Container = styled.div`
+  margin: 65px 0;
+`;
+
+const Table = styled.table`
+  border: 3px solid $main-black;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  background-color: #ffffff;
+
+  * {
+    background-color: #ffffff;
+  }
+`;
+
+const NameTD = styled.td`
+  width: 150px;
+  text-align: center;
+
+  svg{
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 22px;
+  }
+`;
+
+const EmailIconTD = styled.td`
+  width: 200px;
+  text-align: center;
+
+  svg {
+    color: $light-blue;
+  }
+`;
+
+const EmailInfoTD = styled.td`
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+`;
+
+const PhoneIconTD = styled.td`
+  text-align: center;
+`;
+
+const PhoneInfoTD = styled.td`
+  text-align: center;
+  font-size: 18px;
+`;
 
 function SubjectData() {
   return (
-    <div>
+    <Fragment>
       <Nav />
 
-      <div>
-        <table>
+      <Container>
+        <Table>
           <tbody>
             <tr>
-              <td rowSpan='2'>
+              <NameTD rowSpan='2'>
                 <div>
                   <FontAwesomeIcon icon={faUser} size='4x' />
                 </div>
                 <span>나연묵 교수님</span>
-              </td>
-              <td> 
+              </NameTD>
+              <EmailIconTD> 
                 <FontAwesomeIcon icon={faEnvelope} size='2x' />
-              </td>
-              <td> 
+              </EmailIconTD>
+              <EmailInfoTD> 
                 <span>DKU@dankook.ac.kr</span>
-              </td>
+              </EmailInfoTD>
             </tr>
             <tr>
-              <td> 
+              <PhoneIconTD> 
                 <FontAwesomeIcon icon={faPhone} size='2x' />
-              </td>
-              <td> 
+              </PhoneIconTD>
+              <PhoneInfoTD> 
                 <span>031-80XX-XXXX</span>
-              </td>
+              </PhoneInfoTD>
             </tr>
           </tbody>
-        </table>
-      </div>
+        </Table>
+      </Container>
       
       <BookInfo />
-    </div>
+    </Fragment>
   )
 }
 
