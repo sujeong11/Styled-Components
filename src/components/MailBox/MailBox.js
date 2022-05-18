@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import theme from '../../styles/theme';
 
 
 const Container = styled.div`
@@ -9,44 +10,127 @@ const Container = styled.div`
   }
 `;
 
+const Form = styled.form`
+  width: 420px;
+  margin-bottom: 10px;
+`;
+
+const Table = styled.table`
+  border-spacing: 20px;
+`;
+
+const TableTH = styled.table`
+  width: 130px;
+  height: 70px;
+`;
+
+const TableTD = styled.table`
+  width: 250px;
+  font-size: 18px;
+`;
+
+const ProfessorTH = styled(TableTH)`
+  font-size: 28px;
+  border: 0;
+  background-color: ${props => props.theme.lightBlue};
+`;
+
+const ProfessorTD = styled(TableTD)`
+  ul {
+    list-style: none;
+
+    li{
+      text-align: center;
+    }
+  }
+`;
+
+const AssignmentTH = styled(TableTH)`
+  font-size: 18px;
+  vertical-align: top;
+`;
+
+const Textarea = css`
+  width: ${props => props.width};
+  height: ${props => props.height};
+  background-color: ${props => props.color1};
+  resize: none;
+  color: ${props => props.color2}; 
+`
+
+const AssignmentTD = styled(TableTD)`
+  ${Textarea};
+`;
+
+const QuestionTH = styled(TableTH)`
+  font-size: 18px;
+  vertical-align: top;
+`;
+
+const QuestionTD = styled(TableTD)`
+  ${Textarea};
+`;
+
+const ResultTD = styled(TableTD)`
+  ${Textarea};
+`;
+
+const ButtonDiv = styled.div`
+  text-align: right;
+`;
+
+const Button = styled.button`
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  background-color: #ffffff;
+  cursor: pointer;
+`;
+
 function MailBox() {
   return (
     <Container>
-      <form>
-        <table>
+      <Form>
+        <Table>
           <tbody>
             <tr>
-              <th>우진운</th>
-              <td>
+              <ProfessorTH>우진운</ProfessorTH>
+              <ProfessorTD>
                 <ul>
                   <li>dnwlsdns@naver.com</li>
                   <li>wlsdns@dankook.ac.kr</li>
                 </ul>
-              </td>
+              </ProfessorTD>
             </tr>
             <tr>
-              <th>과제</th>
-              <td>
+              <AssignmentTH>과제</AssignmentTH>
+              <AssignmentTD 
+                width="250px" height="70px" color1="#ffffff" color2={theme.mainBlack}
+              >
                 <textarea />
-              </td>
+              </AssignmentTD>
             </tr>
             <tr>
-              <th>질문</th>
-              <td>
+              <QuestionTH>질문</QuestionTH>
+              <QuestionTD
+                width="400px" height="90px" color1="#ffffff" color2="#666666"
+              >
                 <textarea />
-              </td>
+              </QuestionTD>
             </tr>
             <tr>
-              <td colSpan='2'>
+              <ResultTD colSpan='2' 
+                width="250px" height="70px" color1="#f1eeee" color2={theme.mainBlack}
+              >
                 <textarea />
-              </td>
+              </ResultTD>
             </tr>
           </tbody>
-        </table>
-        <div>
-          <button type='submit'>양식 등록</button>
-        </div>
-      </form>
+        </Table>
+        <ButtonDiv>
+          <Button type='submit'>양식 등록</Button>
+        </ButtonDiv>
+      </Form>
     </Container>
   )
 }
