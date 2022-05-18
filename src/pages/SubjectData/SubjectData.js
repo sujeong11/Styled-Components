@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Table = styled.table`
-  border: 3px solid $main-black;
+  border: 3px solid ${props => props.theme.mainBlack};
   width: 1000px;
   margin: 0 auto;
   padding: 20px 50px;
@@ -42,7 +42,7 @@ const EmailIconTD = styled.td`
   text-align: center;
 
   svg {
-    color: $light-blue;
+    color: ${props => props.theme.lightBlue};
   }
 `;
 
