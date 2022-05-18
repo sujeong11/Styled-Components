@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 const Table = styled.table`
   margin: 0 auto;
-  border-spacing: 5px;
+  border-spacing: 7px;
 `;
 
 const Caption = styled.caption`
@@ -29,6 +29,7 @@ const TableBodyTD = styled.td`
   height: 30px;
   font-size: 15px;
   background-color: #ffffff;
+  border-bottom: 1px solid #999999;
 `;
 
 const ProfessorTD = styled(TableBodyTD)`
@@ -39,7 +40,7 @@ const CourseTD = styled(TableBodyTD)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 2px 15px;
 
   span {
     background-color: #ffffff;
@@ -52,7 +53,7 @@ const CourseTD = styled(TableBodyTD)`
     border: 1px solid ${props => props.theme.mainBlack};
     border-radius: 10px;
     padding: 0 30px;
-    margin-right: 30px;
+    margin: 0 5px 5px 0;
   }
 `;
 
